@@ -10,6 +10,6 @@
 	</Folder>
 	<Folder Name="/document/">
 		<File Path="README.md" />
-		<File Path="src/TypeMetadata/README.md" />
+		<File Path="README.en.md" />
 	</Folder>
 </Solution>

@@ -1,6 +1,6 @@
 # TypeMetadata
 
-[English](README.en.md) | 简体中文
+[English](https://github.com/util-core/TypeMetadata/blob/main/README.en.md) | 简体中文
 
 每个泛型类型的静态元数据缓存。
 
@@ -10,7 +10,7 @@
 ## 安装
 
 ```bash
-dotnet add package TypeMetadata --version 1.0.0-preview.1
+dotnet add package TypeMetadata --version 1.0.0-preview.2
 ```
 
 ## 用法

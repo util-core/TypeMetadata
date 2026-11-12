@@ -1,6 +1,6 @@
 # TypeMetadata
 
-English | [简体中文](README.md)
+English | [简体中文](https://github.com/util-core/TypeMetadata/blob/main/README.md)
 
 A static metadata cache per generic type for .NET.
 
@@ -11,7 +11,7 @@ A static metadata cache per generic type for .NET.
 ## Install
 
 ```bash
-dotnet add package TypeMetadata --version 1.0.0-preview.1
+dotnet add package TypeMetadata --version 1.0.0-preview.2
 ```
 
 ## Usage

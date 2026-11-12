@@ -8,13 +8,42 @@ One static cache per generic type `T`, owned once per application, so libraries 
 store the same type information over and over. It is resolved once on first access; every read
 after that is a static field access and never throws.
 
-Full documentation: [src/TypeMetadata/README.en.md](src/TypeMetadata/README.en.md).
-
 ## Install
 
 ```bash
 dotnet add package TypeMetadata --version 1.0.0-preview.1
 ```
+
+## Usage
+
+```csharp
+using TypeMetadata;
+
+// Type checks
+TypeMeta<int>.IsInteger        // true
+TypeMeta<int>.IsValueType      // true
+TypeMeta<int?>.IsNullable      // true
+TypeMeta<MyEnum>.IsEnum        // true, enums are also integers (integral underlying type)
+TypeMeta<string>.IsEnum        // false
+
+// Type info
+TypeMeta<int?>.Type              // typeof(int?), the raw type
+TypeMeta<int?>.UnderlyingType    // typeof(int), unwrapped underlying type
+TypeMeta<MyEnum>.UnderlyingType  // typeof(MyEnum), itself when not nullable
+```
+
+## API
+
+All members of `TypeMeta<T>` are static readonly fields:
+
+| Member | Meaning |
+|---|---|
+| `Type` | Raw type `typeof(T)` |
+| `UnderlyingType` | Unwrapped underlying type (`int?` → `int`) |
+| `IsNullable` | Whether `T` is nullable |
+| `IsValueType` | Whether the underlying type is a value type |
+| `IsEnum` | Whether the underlying type is an enum (also true for nullable enums) |
+| `IsInteger` | Whether the underlying type is an integer (8/16/32/64-bit, signed and unsigned) |
 
 ## Author
 

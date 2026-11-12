@@ -2,7 +2,7 @@
 
 English | [简体中文](https://github.com/util-core/TypeMetadata/blob/main/README.md)
 
-A static metadata cache per generic type for .NET.
+A type metadata cache utility library for .NET.
 
 - Generic static classes cache one instance per `T`.
 - Type information is resolved once in the static constructor; every access afterwards is a
@@ -11,7 +11,7 @@ A static metadata cache per generic type for .NET.
 ## Install
 
 ```bash
-dotnet add package TypeMetadata --version 1.0.0
+dotnet add package TypeMetadata --version 1.0.1
 ```
 
 ## Usage

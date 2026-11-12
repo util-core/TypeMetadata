@@ -6,7 +6,7 @@
 		<RootNamespace>TypeMetadata</RootNamespace>
 		<PackageId>TypeMetadata</PackageId>
 		<Authors>何镇汐</Authors>
-		<Description>每个泛型类型的静态元数据缓存</Description>
+		<Description>类型元数据缓存工具类库</Description>
 		<PackageTags>metadata;enum;reflection;aot</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>

@@ -2,7 +2,7 @@
 
 [English](https://github.com/util-core/TypeMetadata/blob/main/README.en.md) | 简体中文
 
-每个泛型类型的静态元数据缓存。
+类型元数据缓存工具类库。
 
 - 泛型静态类按 `T` 缓存一份元数据。
 - 类型 `T` 在静态构造函数中解析一次,之后每次访问都是静态字段读取。
@@ -10,7 +10,7 @@
 ## 安装
 
 ```bash
-dotnet add package TypeMetadata --version 1.0.0
+dotnet add package TypeMetadata --version 1.0.1
 ```
 
 ## 用法

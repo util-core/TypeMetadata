@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+		<AssemblyName>TypeMetadata</AssemblyName>
+		<RootNamespace>TypeMetadata</RootNamespace>
+		<PackageId>TypeMetadata</PackageId>
+		<Authors>何镇汐</Authors>
+		<Description>每个泛型类型的静态元数据缓存</Description>
+		<PackageTags>metadata;enum;reflection;aot</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>images/TypeMetadata.png</PackageIcon>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<DebugType>portable</DebugType>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<RepositoryUrl>https://github.com/util-core/TypeMetadata.git</RepositoryUrl>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
+		<IsAotCompatible>true</IsAotCompatible>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="" />
+		<None Include="..\..\build\images\icon.png" Pack="true" PackagePath="images/TypeMetadata.png" Visible="false" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="TypeMetadata.Tests" />
+	</ItemGroup>
+
+</Project>

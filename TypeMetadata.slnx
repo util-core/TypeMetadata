@@ -1,0 +1,15 @@
+<Solution>
+	<Folder Name="/src/">
+		<Project Path="src/TypeMetadata/TypeMetadata.csproj" />
+	</Folder>
+	<Folder Name="/test/">
+		<Project Path="test/TypeMetadata.Tests/TypeMetadata.Tests.csproj" />
+	</Folder>
+	<Folder Name="/build/">
+		<File Path="build/version.props" />
+	</Folder>
+	<Folder Name="/document/">
+		<File Path="README.md" />
+		<File Path="src/TypeMetadata/README.md" />
+	</Folder>
+</Solution>

@@ -11,7 +11,7 @@ A static metadata cache per generic type for .NET.
 ## Install
 
 ```bash
-dotnet add package TypeMetadata --version 1.0.0-preview.2
+dotnet add package TypeMetadata --version 1.0.0
 ```
 
 ## Usage

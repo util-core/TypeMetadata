@@ -3,6 +3,11 @@ name: Release
 on:
   push:
     tags: [ "v*" ]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 要发布的版本号,例如 1.0.0-preview.3
+        required: true
 
 jobs:
   publish:
@@ -21,7 +26,11 @@ jobs:
       - name: 测试
         run: dotnet test TypeMetadata.slnx -c Release
       - name: 打包
-        run: dotnet pack src/TypeMetadata/TypeMetadata.csproj -c Release -o artifacts/packages -p:Version=${GITHUB_REF_NAME#v}
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          if [ -z "$VERSION" ]; then VERSION="${GITHUB_REF_NAME#v}"; fi
+          dotnet pack src/TypeMetadata/TypeMetadata.csproj -c Release -o artifacts/packages -p:Version="$VERSION"
       - name: 获取 NuGet 临时密钥
         id: login
         uses: NuGet/login@v1

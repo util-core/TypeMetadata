@@ -1,8 +1,26 @@
-bin/
-obj/
+# 生成输出
+[Bb]in/
+[Oo]bj/
 artifacts/
 TestResults/
-BenchmarkDotNet.Artifacts/
+
+# IDE
 .vs/
+.idea/
+*.user
+*.suo
+*.DotSettings.user
+
+# AI
 .workbuddy/
+.zcode/
+
+# 性能测试
+BenchmarkDotNet.Artifacts/
+
+# 日志
 *.binlog
+
+# 系统
+.DS_Store
+Thumbs.db

@@ -11,7 +11,7 @@ A type metadata cache utility library for .NET.
 ## Install
 
 ```bash
-dotnet add package TypeMetadata --version 1.0.1
+dotnet add package TypeMetadata --version 1.0.2
 ```
 
 ## Usage
@@ -44,6 +44,15 @@ All members of `TypeMeta<T>` are static readonly fields:
 | `IsValueType` | Whether the underlying type is a value type |
 | `IsEnum` | Whether the underlying type is an enum (also true for nullable enums) |
 | `IsInteger` | Whether the underlying type is an integer (8/16/32/64-bit, signed and unsigned) |
+
+## Underlying Type Cache
+
+`UnderlyingTypeCache` provides a shared underlying-type resolution cache; nullable types are unwrapped once and the result is cached:
+
+| Member | Meaning |
+|---|---|
+| `Get(Type)` | Gets the underlying type (`int?` → `int`); returns the type itself when not nullable, `null` for `null` |
+| `Clear()` | Clears the cache |
 
 ## Author
 

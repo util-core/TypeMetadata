@@ -10,7 +10,7 @@
 ## 安装
 
 ```bash
-dotnet add package TypeMetadata --version 1.0.1
+dotnet add package TypeMetadata --version 1.0.2
 ```
 
 ## 用法
@@ -43,6 +43,15 @@ TypeMeta<MyEnum>.UnderlyingType  // typeof(MyEnum),非可空时为自身
 | `IsValueType` | 是否值类型(按基础类型判断) |
 | `IsEnum` | 是否枚举类型(按基础类型判断,可空枚举也为真) |
 | `IsInteger` | 是否整数类型(8/16/32/64 位有符号与无符号整数) |
+
+## 基础类型缓存
+
+`UnderlyingTypeCache` 为类型提供共享的基础类型解析缓存,可空类型解包一次后缓存结果:
+
+| 成员 | 含义 |
+|---|---|
+| `Get(Type)` | 获取基础类型(`int?` → `int`);非可空类型返回自身,`null` 返回 `null` |
+| `Clear()` | 清空缓存 |
 
 ## 作者
 

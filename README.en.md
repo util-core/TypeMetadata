@@ -11,7 +11,7 @@ A type metadata cache utility library for .NET.
 ## Install
 
 ```bash
-dotnet add package TypeMetadata --version 1.0.2
+dotnet add package TypeMetadata --version 1.0.3
 ```
 
 ## Usage

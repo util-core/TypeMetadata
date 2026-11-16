@@ -37,6 +37,14 @@ public class UnderlyingTypeCacheTests {
     }
 
     /// <summary>
+    /// 开放泛型 Nullable<> 不是可空实例,返回自身而非泛型参数
+    /// </summary>
+    [Fact]
+    public void TestOpenGenericNullable() {
+        Assert.Equal( typeof( Nullable<> ), UnderlyingTypeCache.Get( typeof( Nullable<> ) ) );
+    }
+
+    /// <summary>
     /// 空引用返回 null
     /// </summary>
     [Fact]

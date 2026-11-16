@@ -10,7 +10,7 @@
 ## 安装
 
 ```bash
-dotnet add package TypeMetadata --version 1.0.2
+dotnet add package TypeMetadata --version 1.0.3
 ```
 
 ## 用法

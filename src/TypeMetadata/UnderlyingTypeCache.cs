@@ -23,7 +23,7 @@ public static class UnderlyingTypeCache {
             return type;
         if ( _cache.TryGetValue( type, out var result ) )
             return result;
-        Type underlying = type.GetGenericArguments()[0];
+        Type underlying = Nullable.GetUnderlyingType( type ) ?? type;
         return _cache.GetOrAdd( type, underlying );
     }
 
